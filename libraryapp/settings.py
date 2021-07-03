@@ -139,4 +139,4 @@ try:
 except ImportError:
     raise Exception('local settings file is required')
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
