@@ -1,0 +1,3 @@
+[
+    {"model": "book.book", "pk": 1, "fields": {"title": "A journey to center of the earth", "thumbnail": "", "poster": "image/ajtce3_U9QDLoX.jpg", "no_of_reads": 0, "short_describtion": null, "long_describtion": null, "isbn": null, "page_count": null, "status": "Publish", "authars": []}},
+    {"model": "book.book", "pk": 2, "fields": {"title": "Jumanji", "thumbnail": "", "poster": "image/jumanji.jpg", "no_of_reads": 0, "short_describtion": null, "long_describtion": null, "isbn": null, "page_count": null, "status": "Publish", "authars": []}}]

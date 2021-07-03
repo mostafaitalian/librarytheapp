@@ -1,0 +1,3 @@
+[
+    {"model": "book.authar", "pk": 1, "fields": {"name": "Jules Verne"}},
+    {"model": "book.authar", "pk": 2, "fields": {"name": "Chris Van"}}]

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block css1 %}
+  <style>
+    @font-face {
+      font-family: fox;
+      src: url('../../../static/fonts/Source_Code_Pro/SourceCodePro-Medium.ttf');
+    }
+    @font-face {
+      font-family: fox1;
+      src: url('../../../static/fonts/Bitter/Bitter-VariableFont_wght.ttf');
+    }
+    .book-card-title , h2.book-card-count{
+      font-family: 'fox';
+      padding: 5px 0px;
+      border-bottom: 1px solid lightgray;
+      color: brown;
+    }
+    p.book-card-p{
+      font-family: fox1;
+      font-weight: bold;
+      font-size: large;
+      line-height: 3rem;
+      word-spacing: 1.2rem;
+    }
+  </style>
+{% endblock css1 %}
+<style>
+
+</style>
+{% block content %}
+<div class="book-card" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+  <h1 class="book-card-title">
+    {{book.title}}
+  </h1>
+  {% with "http://localhost:8000/media/" as name %}
+
+  <a href="{% url 'book:book-detail' book.id %}"><img class="card-image rounded" width="300px" height="400px"
+      src="{% if book.poster|make_list|first == 'i' %} {{ name }}{{ book.poster }} {% else %} {{ book.poster }} {% endif %}"
+      alt=""></a>
+  {% endwith %}
+    <h2 class="book-card-count">Page Count :<span>{{ book.page_count }}</span></h2>
+    <h2 class="book-card-count">ISBN :<span>{{ book.isbn }}</span></h2>
+
+
+    {% if book.short_description %}
+    <div class="sd">
+      <h2 class="book-card-count">OverView</h2>
+
+      <p class="book-card-p">
+        {{ book.short_description }}
+      </p>
+    </div>
+
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    {% if book.long_description %}
+    <div class="ld">
+      <h2>Read More</h2>
+
+      <p class="book-card-p">
+        {{ book.long_description }}
+      </p>
+    </div>
+    
+    {% endif %}
+      
+</div>
+
+
+</div>
+{% endblock content %}

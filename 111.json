@@ -1,0 +1,13 @@
+[
+    {"model": "book.book", "pk": 1,
+        "fields": {"title": "A journey to center of the earth",
+            "published_date": null,
+            "thumbnail": "",
+            "poster": "image/ajtce3_AV9ztLo.jpg",
+            "no_of_reads": 0, 
+            "short_describtion": "", 
+            "long_describtion": "", 
+            "isbn": null, 
+            "page_count": null, 
+            "status": "Publish", 
+            "authars": ["mostafa mohamed"]}}]
